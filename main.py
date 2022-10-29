@@ -1,7 +1,7 @@
 import speech_recognition as sr 
 import moviepy.editor as mp
 
-#Videonun uzantisina dikkat et!
+#Video Dosyası Wav formatına dönüştürülüyor .(video yüklerken uzantisina dikkat edin!)
 clip = mp.VideoFileClip('video_recording.mov')
  
 clip.audio.write_audiofile('converted.wav')
@@ -12,4 +12,6 @@ audio = sr.AudioFile('converted.wav')
 with audio as source:
   audio_file = r.record(source)
 result = r.recognize_google(audio_file)
+
+
 
