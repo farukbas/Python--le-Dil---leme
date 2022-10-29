@@ -13,8 +13,10 @@ with audio as source:
   audio_file = r.record(source)
 result = r.recognize_google(audio_file)
 
-#Sonuçlar txt dosyasına yazılıyor..
-with open('kelimeler.txt',mode ='w') as file: 
-   file.write(result,) 
-   print("Program tamamlandı!")
 
+sayac=0
+for sayac in range(sayac,len(result)):
+  print(result[sayac],end="")
+  if result[sayac] == " " :
+    print("\n")
+  sayac += 1
